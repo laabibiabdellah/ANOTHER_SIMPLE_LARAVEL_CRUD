@@ -7,8 +7,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CRUD | {{$title}}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+      .none{
+        display: none !important;
+      }
+      #preloader{
+        position: fixed;
+        z-index: 999999;
+        background-color: #252525;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+      }
+    </style>
 </head>
 <body>
+  <div class="d-flex align-items-center justify-content-center" id="preloader">
+    <img src="{{asset('gif/preloader.gif')}}" width="100px">
+  </div>
     <div class="w-100">
       <nav class="navbar navbar-expand-lg border-bottom border-body" style="background-color: #e3f2fd;">
         <div class="container">
@@ -36,6 +53,13 @@
     {{-- Sweet alert --}}
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
+
+    let loader = document.querySelector('#preloader');
+    window.addEventListener('load', () => {
+      loader.classList.add("none");
+    });
+
+
       let links = document.querySelectorAll('.nav-link')
       links.forEach(element => {
         element.pathname == window.location.pathname?
