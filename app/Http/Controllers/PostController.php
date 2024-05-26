@@ -72,6 +72,6 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         $post->delete();
-        return to_route('all-posts')->with('Post deleted successfully');
+        return to_route('all-posts')->with('success', 'Post deleted successfully');
     }
 }

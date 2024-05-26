@@ -1,6 +1,6 @@
 <x-scope title="All posts">
     @if (session()->has('success'))
-      <div class="alert alert-success text-center">{{session()->get('success')}}</div>
+      <div class="alert alert-success text-center mt-4">{{session()->get('success')}}</div>
     @endif
     <div class="d-flex align-items-center justify-content-center py-5">
         @if (count($posts)==0)
