@@ -15,6 +15,6 @@
             <small class="text-danger">{{$message}}</small>
         @enderror
         </div>
-        <button type="submit" class="btn btn-info text-white">Submit</button>
+        <button type="submit" class="btn btn-info text-white w-100">Submit</button>
       </form>
 </div>
