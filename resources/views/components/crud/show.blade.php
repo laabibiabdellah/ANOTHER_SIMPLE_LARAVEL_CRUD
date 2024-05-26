@@ -12,7 +12,7 @@
     <div id="show" class="d-flex align-items-center justify-content-center py-5">
         <a id="back-to-all-posts" href="{{route('all-posts')}}" class="btn btn-dark text-white">Back</a>
         <div class="card text-center" style="width: 18rem;">
-            <img src="{{asset('storage/'.$post->img)}}" class="card-img-top" style="height:80px ;" alt="...">
+            <img src="{{asset('storage/'.$post->img)}}" class="card-img-top" style="height:150px ;" alt="...">
             <div class="card-body">
                 <p class="card-text">{{Str::limit($post->desc,30,'...')}}</p>
                 <div class="d-flex justify-content-center gap-3 w-100">

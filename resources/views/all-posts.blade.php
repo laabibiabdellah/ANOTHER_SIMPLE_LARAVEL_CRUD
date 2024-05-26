@@ -9,7 +9,7 @@
             <div class="d-flex justify-content-center flex-wrap gap-5">
                 @foreach ($posts as $post )
                 <div class="card text-center" style="width: 18rem;">
-                    <img src="{{asset('storage/'.$post->img)}}" class="card-img-top" style="height:80px ;" alt="...">
+                    <img src="{{asset('storage/'.$post->img)}}" class="card-img-top" style="height:150px ;" alt="...">
                     <div class="card-body">
                       <p class="card-text">{{Str::limit($post->desc,30,'...')}}</p>
                       <a href="{{route('post.show',$post)}}" class="btn btn-info text-white">Show</a>
